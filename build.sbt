@@ -1,4 +1,3 @@
-# ビルドの設定を定義している
 name := """play-java-seed"""
 organization := "com.example"
 
