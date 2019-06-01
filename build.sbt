@@ -1,3 +1,4 @@
+# ビルドの設定を定義している
 name := """play-java-seed"""
 organization := "com.example"
 
@@ -7,4 +8,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 scalaVersion := "2.12.8"
 
-libraryDependencies += guice
+libraryDependencies ++= Seq(
+  javaJdbc,
+  cache,
+  javaWs
+)
