@@ -1,89 +1,11 @@
-2019-06-02 15:26:23,658 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] initialized at jdbc:mysql://localhost:3314/facebook
-2019-06-02 15:26:23,996 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] initialized at jdbc:mysql://localhost:3314/facebook
-2019-06-02 15:26:24,269 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-4 - 
+2019-06-05 01:10:47,089 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] initialized at jdbc:mysql://localhost:3314/facebook
+2019-06-05 01:10:47,101 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2019-06-05 01:10:47,649 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-! @7c4457j5p - Internal server error, for (GET) [/] ->
- 
-play.api.Configuration$$anon$1: Configuration error[Cannot initialize to database [default]]
-	at play.api.Configuration$.configError(Configuration.scala:171)
-	at play.api.Configuration.reportError(Configuration.scala:1018)
-	at play.api.db.DefaultDBApi.$anonfun$initialize$1(DefaultDBApi.scala:77)
-	at scala.collection.immutable.List.foreach(List.scala:392)
-	at play.api.db.DefaultDBApi.initialize(DefaultDBApi.scala:69)
-	at play.api.db.DBApiProvider.get$lzycompute(DBModule.scala:94)
-	at play.api.db.DBApiProvider.get(DBModule.scala:78)
-	at play.api.db.DBApiProvider.get(DBModule.scala:59)
-	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85)
-	at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:77)
-	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:59)
-	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:61)
-	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:52)
-	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:147)
-	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
-	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:71)
-	at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:1014)
-	at com.google.inject.util.Providers$GuicifiedProviderWithDependencies.initialize(Providers.java:154)
-	at com.google.inject.util.Providers$GuicifiedProviderWithDependencies$$FastClassByGuice$$2a7177aa.invoke(<generated>)
-	at com.google.inject.internal.SingleMethodInjector$1.invoke(SingleMethodInjector.java:51)
-	at com.google.inject.internal.SingleMethodInjector.inject(SingleMethodInjector.java:85)
-	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:147)
-	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
-	at com.google.inject.internal.Initializer$InjectableReference.get(Initializer.java:245)
-	at com.google.inject.internal.Initializer.injectAll(Initializer.java:140)
-	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:176)
-	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:109)
-	at com.google.inject.Guice.createInjector(Guice.java:87)
-	at com.google.inject.Guice.createInjector(Guice.java:78)
-	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:201)
-	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:156)
-	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:22)
-	at play.core.server.DevServerStart$$anon$1.$anonfun$reload$3(DevServerStart.scala:193)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:22)
-	at play.core.server.DevServerStart$$anon$1.reload(DevServerStart.scala:185)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:144)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:304)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:189)
-	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1262)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:523)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:409)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:599)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:480)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:574)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:742)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:757)
-	at akka.actor.Actor.aroundReceive(Actor.scala:539)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:664)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:579)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: play.api.Configuration$$anon$1: Configuration error[Driver not found: [com.mysql.jdbc.Driver}]]
-	at play.api.Configuration$.configError(Configuration.scala:171)
-	at play.api.Configuration.reportError(Configuration.scala:1018)
-	at play.api.db.DefaultDatabase.$anonfun$driver$1(Databases.scala:133)
-	at scala.Option.map(Option.scala:163)
-	at play.api.db.DefaultDatabase.driver$lzycompute(Databases.scala:127)
-	at play.api.db.DefaultDatabase.driver(Databases.scala:126)
-	at play.api.db.DefaultDatabase.dataSource$lzycompute(Databases.scala:141)
-	at play.api.db.DefaultDatabase.dataSource(Databases.scala:140)
-	at play.api.db.DefaultDBApi.$anonfun$initialize$1(DefaultDBApi.scala:73)
-	... 55 common frames omitted
-Caused by: play.api.PlayException: Cannot load Driver[Driver [com.mysql.jdbc.Driver] cannot be instantiated.]
-	at play.utils.Reflect$.createInstance(Reflect.scala:173)
-	at play.api.db.DefaultDatabase.$anonfun$driver$1(Databases.scala:129)
-	... 61 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
-	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:471)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:398)
-	at play.utils.Reflect$.getClass(Reflect.scala:178)
-	at play.utils.Reflect$.createInstance(Reflect.scala:167)
-	... 62 common frames omitted
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2019-06-05 01:10:47,744 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev) (no global state)
+2019-06-05 01:14:06,973 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-shutdown-hook-1 - Stopping server...
+2019-06-05 01:14:07,019 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
