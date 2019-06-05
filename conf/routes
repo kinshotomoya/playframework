@@ -8,3 +8,4 @@ GET     /                           controllers.Assets.at(path="/public/bundle/"
 
 # webpackでビルドされたjsファイル（/public/bundle/static/js/以下）のファイルを読み込めるように設定
 GET     /public/bundle/static/js/*file            controllers.Assets.at(path="/public/bundle/static/js", file)
+GET     /public/bundle/static/css/*file            controllers.Assets.at(path="/public/bundle/static/css", file)
