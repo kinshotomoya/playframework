@@ -8,6 +8,8 @@ services:
       context: ./
       dockerfile: ./front/Dockerfile
     container_name: vue-js-container
+    volumes:
+      - ./public:/app/public
     ports:
       - 8080:8080
     tty: true
