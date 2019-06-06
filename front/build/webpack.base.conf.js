@@ -25,7 +25,7 @@ module.exports = {
     app: './src/main.js'
   },
   output: {
-    path: path.resolve('../public/js'),
+    path: path.resolve('./public/js'),
     filename: '[name].js',
     // index.htmlのscriptタグをつける時に、/public/bundle/...となるように設定する
     publicPath: process.env.NODE_ENV === 'production'

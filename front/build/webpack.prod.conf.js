@@ -1,3 +1,5 @@
+// NOTE: コンテナ内でビルドするので、ビルドしたファイルは、
+// front/public以下に格納されるように設定している
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -25,7 +27,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
-    path: path.resolve('../public/bundle'),
+    path: path.resolve('./public/bundle'),
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
@@ -64,7 +66,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       // webpackでbuildしたhtmlの出力先を指定
-      filename: '../bundle/index.html',
+      filename: 'index.html',
       // どのファイルを元にbuildファイルを作るのか指定
       template: 'index.html',
       inject: true,
