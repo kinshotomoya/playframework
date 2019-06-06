@@ -1,5 +1,13 @@
 version: "3"
 services:
+  # node.js npm webpackの環境構築
+  front:
+    build: ./app/Dockerfile
+    container_name: vue-js-container
+  # playframeworkの環境を整える。
+  # sbtを使えるように
+  play-framework:
+    build: ./front/Dockerfile
   db:
     image: mysql:5.7
     container_name: mysql-container
