@@ -1,0 +1,18 @@
+.g8
+.idea
+.gradle
+
+/project/
+target/
+
+# DB関連
+/db/data
+
+# フロント用のライブラリ
+/node_modules/
+
+
+package-*.json
+
+# ビルドされたフロントの用のファイル
+bundle/
