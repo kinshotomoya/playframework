@@ -1,3 +1,4 @@
+# 開発環境用のdokcer-compose
 version: "3"
 services:
   # node.js npm webpackの環境構築
@@ -8,16 +9,11 @@ services:
       context: ./
       dockerfile: ./front/Dockerfile
     container_name: vue-js-container
-    volumes:
-      - ./public:/app/public
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
     ports:
-      - 8080:8080
+      - "8080:8080"
     tty: true
-#  nginx:
-#    build:
-
-#    volumes:
-#      - ./public
   # playframeworkの環境を整える。
   # sbtを使えるように
 #  play-framework:
