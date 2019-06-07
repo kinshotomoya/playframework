@@ -1,0 +1,12 @@
+version: "3"
+services:
+  nginx:
+    build:
+      # dockerfileは、親ディレクトリをCOPYできないので、
+      # ここで、contextをルートに設定している。
+      context: ./
+      dockerfile: ./front/Dockerfile.prod
+    container_name: nginx-container
+    ports:
+      - "80:80"
+    tty: true
