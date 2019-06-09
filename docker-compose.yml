@@ -11,6 +11,8 @@ services:
     container_name: vue-js-container
     environment:
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+    volumes:
+      - ./front:/app/
     # ホストから通信するためのポート
     networks:
       - facebook-play
