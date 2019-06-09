@@ -1,6 +1,8 @@
 .g8
 .idea
 .gradle
+.ivy2
+.sbt
 
 /project/
 target/
@@ -10,9 +12,11 @@ target/
 
 # フロント用のライブラリ
 /node_modules/
-
-
 package-*.json
 
 # ビルドされたフロントの用のファイル
 bundle/
+
+
+# log関連
+logs/
