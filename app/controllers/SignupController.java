@@ -5,7 +5,7 @@ import play.mvc.*;
 
 public class SignupController extends Controller {
 
-    public Result signup() {
+    public static void signup() {
         System.out.println("ssssssss");
     }
 }
