@@ -14,11 +14,11 @@ module.exports = {
       // webpack-dev-serverの/api以下のリクエストを、play-container:9000にプロキシする設定
       // pathRewriteは、例えば、axios.get('/api/v1/sign_up')でリクエストすると、/apiを削除して、
       // play-container:9000/v1/sign_upにリクエストを送る処理をしてくれる
-      "/api": {
-        "target": 'play-container:9000',
-        "pathRewrite": { '^/api': '' },
-        "changeOrigin": true,
-        "secure": false
+      '/api': {
+        'target': 'play-container:9000',
+        'pathRewrite': { '^/api': '' },
+        'changeOrigin': true,
+        'secure': false
       }
     },
 
