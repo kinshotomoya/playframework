@@ -39,7 +39,7 @@
         //
         // })
         // 一旦getしてみる
-        const res = axios.get('/api/v1/sign_up')
+        const res = axios.get('/api/v1')
           // name: this.name,
           // password: this.password
 

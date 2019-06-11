@@ -7,8 +7,8 @@
 GET     /                           controllers.Assets.at(path="/public/bundle/", file="index.html")
 
 # テストでindexアクションをgetする。きちんと疎通できるかの確認
-GET      /v1                         v1.signup.signupController.index(request:Request)
-POST     /v1/sign_up                 v1.signup.signupController.create(request:Request)
+GET      /v1                         v1.signup.SignupController.index()
+POST     /v1/sign_up                 v1.signup.SignupController.create()
 
 # webpackでビルドされたjsファイル（/public/bundle/static/js/以下）のファイルを読み込めるように設定
 GET     /public/bundle/static/js/*file            controllers.Assets.at(path="/public/bundle/static/js", file)
