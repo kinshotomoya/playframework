@@ -13,12 +13,13 @@ module.exports = {
     proxyTable: {
       // webpack-dev-serverの/api以下のリクエストを、play-container:9000にプロキシする設定
       // pathRewriteは、例えば、axios.get('/api/v1/sign_up')でリクエストすると、/apiを削除して、
-      // play-container:9000/v1/sign_upにリクエストを送る処理をしてくれる
-      "/api": {
-        "target": 'play-container:9000',
-        "pathRewrite": { '^/api': '' },
-        "changeOrigin": true,
-        "secure": false
+      // play-container:9000/にリクエストを送る処理をしてくれる
+      // 通信したいコンテナ名を記述する
+      '/api': {
+        'target': 'http://play-container:9000',
+        'pathRewrite': { '^/api': '' },
+        'changeOrigin': true,
+        'secure': false
       }
     },
 
