@@ -3,6 +3,9 @@ package v1.signup;
 
 
 import play.mvc.*;
+import play.libs.Json;
+
+import java.util.List;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -20,9 +23,17 @@ public class SignupController extends Controller {
         return ok(views.html.index.render());
     }
 
-    public Result create() {
+    public Result test(Http.Request request) {
+        System.out.println(request);
+        return ok(Json.toJson("{id: 1, name: 'tomoya'}"));
+    }
+
+    public Result create(Http.Request request) {
+        System.out.println(token);
         String name = request().getQueryString("name");
-        return ok(views.html.hello.render(name));
+        System.out.println(name);
+
+        return ok("成功したよ");
     }
 
 
