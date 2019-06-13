@@ -35,13 +35,14 @@
       submit: async function() {
         console.log(this.name)
         console.log(this.password)
-        // const httpClient = axios.create({
-        //
-        // })
-        // 一旦getしてみる
-        const res = axios.get('/api/v1')
-          // name: this.name,
-          // password: this.password
+        const header = {
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+        const data = {
+          name: this.name,
+          password: this.password
+        }
+        const res = axios.post('/api/v1/sign_up', data, { headers: header})
 
         console.log(res)
         //

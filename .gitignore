@@ -3,6 +3,7 @@
 .gradle
 .ivy2
 .sbt
+.iml
 
 /project/
 target/
