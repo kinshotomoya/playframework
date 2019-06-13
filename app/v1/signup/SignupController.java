@@ -29,7 +29,6 @@ public class SignupController extends Controller {
     }
 
     public Result create(Http.Request request) {
-        System.out.println(token);
         String name = request().getQueryString("name");
         System.out.println(name);
 

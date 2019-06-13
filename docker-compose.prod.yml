@@ -1,3 +1,4 @@
+# 本番環境用のdocker-compose
 version: "3"
 services:
   nginx:
@@ -10,3 +11,10 @@ services:
     ports:
       - "80:80"
     tty: true
+  app:
+    build:
+      context: ./
+      dockerfile: ./app/Dockerfile.prod
+#    command: # 解凍したファイルを実行する ex) /root/bin/hello -Dplay.http.secret.key=xxxxxxxxxxxx
+#    expose:
+#      - "9000"

@@ -1,0 +1,9 @@
+# 本番環境でのsbt環境
+# 参考
+# https://qiita.com/kazuyoshikakihara/items/f87b4b377b5844f09614#docker%E7%94%A8%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%BA%96%E5%82%99
+
+
+FROM openjdk:8u151-jre
+# 開発環境コンテナでdistしたzipファイルをコンテナにコピーして、root/配下でunzipする。
+COPY ./target/universal/play-java-seed-1.0-SNAPSHOT.zip root/
+RUN chmod +x /root/bin/play-java-seed
